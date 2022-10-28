@@ -30,10 +30,10 @@ fun main() {
             }
 
             Main({ classes(PangMooStyleSheet.main) }) {
-                MainSection {
-                    MainContainer {
-                        MainInfo()
-                        MainActions()
+                HomeSection {
+                    HomeContainer {
+                        HomeInfo()
+                        HomeActions()
                     }
                 }
 
@@ -115,15 +115,15 @@ private fun HeaderItem(text: String, onClick: () -> Unit) {
 }
 
 @Composable
-private fun MainSection(content: ContentBuilder<HTMLDivElement>) =
+private fun HomeSection(content: ContentBuilder<HTMLDivElement>) =
     Div({ classes(PangMooStyleSheet.sectionMain) }, content = content)
 
 @Composable
-private fun MainContainer(content: ContentBuilder<HTMLDivElement>) =
+private fun HomeContainer(content: ContentBuilder<HTMLDivElement>) =
     Div({ classes(PangMooStyleSheet.containerMain) }, content = content)
 
 @Composable
-private fun MainInfo() {
+private fun HomeInfo() {
     Div({ classes(PangMooStyleSheet.mainTitle) }) {
         Text("반갑습니다.")
     }
@@ -133,7 +133,7 @@ private fun MainInfo() {
 }
 
 @Composable
-private fun MainActions() {
+private fun HomeActions() {
     Div({ classes(PangMooStyleSheet.mainActions) }) {
         Button({ classes(PangMooStyleSheet.button) }) {
             Text("ABOUT ME")

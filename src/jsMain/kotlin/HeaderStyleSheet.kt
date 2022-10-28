@@ -1,26 +1,32 @@
+import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.*
 
+@OptIn(ExperimentalComposeWebApi::class)
 object HeaderStyleSheet : StyleSheet() {
     val header by style {
-        width((6.5).vw)
+        width(100.px)
         height(100.percent)
 
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         position(Position.Fixed)
 
-        padding(60.px, 90.px, 30.vw, 60.px)
+        padding(60.px, 90.px, 0.px, 60.px)
         property("border-right", "1px solid #EFEFEF")
+
+        transitionDuration(0.5f)
 
         media(mediaMaxWidth(1000.px)) {
             self style {
-                display(DisplayStyle.None)
+                transform {
+                    translateX((-260).px)
+                }
             }
         }
     }
 
     val profileImg by style {
-        width(5.em + 1.vw)
+        width(100.px)
         alignSelf(AlignSelf.Center)
         borderRadius(50.percent)
     }

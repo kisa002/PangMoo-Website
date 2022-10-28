@@ -10,27 +10,6 @@ object PangMooStyleSheet : StyleSheet() {
 
         fontFamily("Noto Sans KR", "sans-serif")
 //                fontFamily("Happiness-Sans-Title")
-
-        fontSize(1.vw)
-
-
-        media(mediaMaxWidth(1500.px)) {
-            self style {
-                fontSize((1.5).vw)
-            }
-        }
-
-        media(mediaMaxWidth(1000.px)) {
-            self style {
-                fontSize((1.75.vw))
-            }
-        }
-
-        media(mediaMaxWidth(700.px)) {
-            self style {
-                fontSize((2.vw))
-            }
-        }
     }
 
     val sectionMain by style {
@@ -43,9 +22,6 @@ object PangMooStyleSheet : StyleSheet() {
     }
 
     val containerMain by style {
-//        padding(30.vh, 40.percent)
-
-//        width(60.percent)
         padding(30.vh, 30.percent)
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
@@ -59,13 +35,13 @@ object PangMooStyleSheet : StyleSheet() {
     }
 
     val mainTitle by style {
-        fontSize(4.em)
+        fontSize(60.px)
         fontWeight(700)
         color(Color.white)
     }
 
     val mainDescription by style {
-        fontSize((1.1).em)
+        fontSize(25.px)
         marginTop(20.px)
         color(Color.darkgray)
         fontWeight(200)
@@ -81,13 +57,11 @@ object PangMooStyleSheet : StyleSheet() {
         width(100.percent)
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
-        marginLeft((6.5).vw + 150.px)
-//        marginRight((6.5).vw + 150.px)
+        marginLeft(250.px)
 
         media(mediaMaxWidth(1000.px)) {
             self style {
                 marginLeft(0.px)
-                padding(20.vw)
             }
         }
     }
@@ -100,10 +74,14 @@ object PangMooStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
 
-        padding(0.vh, 20.percent)
-
         color(Color.white)
-        fontSize(2.em)
+        padding(0.px, 20.percent)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(0.px, 0.px)
+            }
+        }
     }
 
     val skillSection by style {
@@ -114,10 +92,14 @@ object PangMooStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
 
+        color(Color.white)
         padding(0.vh, 20.percent)
 
-        color(Color.white)
-        fontSize(2.em)
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(0.px, 0.px)
+            }
+        }
     }
 
     val aboutMeInfo by style {
