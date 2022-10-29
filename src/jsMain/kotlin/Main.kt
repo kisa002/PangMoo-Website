@@ -41,7 +41,7 @@ fun main() {
                     AboutMeContainer {
                         Div(attrs = {
                             style {
-                                fontSize((0.8).em)
+                                fontSize(30.px)
                                 fontWeight(900)
                             }
                         }) {
@@ -52,11 +52,14 @@ fun main() {
                             classes(PangMooStyleSheet.aboutMeInfo)
                         }) {
                             AboutMeInfoItem(title = "유광무", description = "이름")
-                            AboutMeInfoItem(title = "스물두살", description = "나이")
+                            AboutMeInfoItem(title = "00년생", description = "나이")
                             AboutMeInfoItem(title = "ENFJ", description = "MBTI")
-                            AboutMeInfoItem(title = "한국공학대학교", description = "학교")
                             AboutMeInfoItem(title = "아우토크립트", description = "회사")
-                            AboutMeInfoItem(title = "코틀린 멀티플랫폼", description = "흥미")
+                            AboutMeInfoItem(title = "한국공학대학교", description = "학교")
+                            AboutMeInfoItem(title = "NULL", description = "여자친구")
+                            AboutMeInfoItem(title = "안드로이드", description = "자신있는 플랫폼")
+                            AboutMeInfoItem(title = "Kotlin Multiplatform", description = "최근 관심 기술")
+                            AboutMeInfoItem(title = "Coroutine Flow", description = "좋아하는 기술")
                         }
                     }
                 }
@@ -65,7 +68,7 @@ fun main() {
                     SkillContainer {
                         Div(attrs = {
                             style {
-                                fontSize((0.8).em)
+                                fontSize(30.px)
                                 fontWeight(900)
                             }
                         }) {
@@ -84,21 +87,23 @@ private fun AboutMeInfoItem(title: String, description: String) {
         classes(PangMooStyleSheet.aboutMeInfoItem)
     }) {
         Div(attrs = {
-            style {
-                fontSize((0.6).em)
-                fontWeight(500)
-            }
+            classes(PangMooStyleSheet.aboutMeInfoItemContainer)
         }) {
-            Text(title)
-        }
-        Div(attrs = {
-            style {
-                fontSize((0.45.em))
-                fontWeight(400)
-                marginTop(5.px)
+            I(attrs = {
+                classes("fa-solid", "fa-cake-candles")
+            })
+            Div(attrs = {
+                style {
+                    classes(PangMooStyleSheet.aboutMeInfoItemValue)
+                }
+            }) {
+                Text(title)
             }
-        }) {
-            Text(description)
+            Div(attrs = {
+                classes(PangMooStyleSheet.aboutMeInfoItemKey)
+            }) {
+                Text(description)
+            }
         }
     }
 }

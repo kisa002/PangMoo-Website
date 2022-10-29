@@ -68,6 +68,8 @@ object PangMooStyleSheet : StyleSheet() {
 
     val aboutMeSection by style {
         padding(10.vh, 0.vh)
+        property("margin-left", "auto")
+        property("margin-right", "auto")
     }
 
     val aboutMeContainer by style {
@@ -75,7 +77,9 @@ object PangMooStyleSheet : StyleSheet() {
         flexDirection(FlexDirection.Column)
 
         color(Color.white)
-        padding(0.px, 20.percent)
+//        padding(0.px, 20.percent)
+
+        maxWidth(1024.px)
 
         media(mediaMaxWidth(1000.px)) {
             self style {
@@ -107,17 +111,44 @@ object PangMooStyleSheet : StyleSheet() {
         flexWrap(FlexWrap.Wrap)
 
         marginTop(40.px)
+
+        maxWidth(1024.px)
+        alignSelf(AlignSelf.Center)
     }
 
     val aboutMeInfoItem by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
 
-        flex(0, 0, (33).percent)
+        flex(0, 0, 33.percent)
 
-        padding(1.vw + 1.vh)
+        marginTop(20.px)
+
+        padding(0.px, 25.px)
         boxSizing("border-box")
-//        border(width = 1.px, style = LineStyle.Solid, color = Colors.primary)
+
+        media(mediaMaxWidth(1500.px)) {
+            self style {
+                flex(0, 0, 33.percent)
+            }
+        }
+    }
+
+    val aboutMeInfoItemContainer by style {
+        textAlign("center")
+        border(width = (0.7).px, style = LineStyle.Solid, color = Color.gray)
+        padding(40.px, 20.px)
+    }
+
+    val aboutMeInfoItemValue by style {
+        fontSize(25.px)
+        fontWeight(500)
+    }
+
+    val aboutMeInfoItemKey by style {
+        fontSize(15.px)
+        fontWeight(400)
+        marginTop(5.px)
     }
 
     val button by style {
