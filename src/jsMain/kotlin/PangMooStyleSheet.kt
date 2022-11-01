@@ -12,54 +12,64 @@ object PangMooStyleSheet : StyleSheet() {
 //                fontFamily("Happiness-Sans-Title")
     }
 
-    val sectionMain by style {
-        width(100.percent)
+    val sectionHome by style {
         height(100.vh)
 
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         alignContent(AlignContent.Center)
+
+        property("margin-left", "auto")
+        property("margin-right", "auto")
     }
 
-    val containerMain by style {
-        padding(30.vh, 30.percent)
+    val containerHome by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         justifyContent(JustifyContent.Center)
+
+        maxWidth(600.px)
+        padding(30.vh, 0.percent)
 
         media(mediaMaxWidth(1000.px)) {
             self style {
                 padding(30.vh, 0.px)
             }
         }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(25.vh, 5.vw)
+            }
+        }
     }
 
-    val mainTitle by style {
+    val homeTitle by style {
         fontSize(60.px)
         fontWeight(700)
         color(Color.white)
     }
 
-    val mainDescription by style {
+    val homeDescription by style {
         fontSize(25.px)
         marginTop(20.px)
         color(Color.darkgray)
         fontWeight(200)
     }
 
-    val mainActions by style {
+    val homeActions by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Row)
         marginTop(40.px)
     }
 
-    val main by style {
+    val home by style {
         width(100.percent)
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         marginLeft(250.px)
 
-        media(mediaMaxWidth(1000.px)) {
+        media(mediaMaxWidth(768.px)) {
             self style {
                 marginLeft(0.px)
             }
@@ -76,14 +86,124 @@ object PangMooStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
 
-        color(Color.white)
-//        padding(0.px, 20.percent)
+        transitionDuration(0.4f)
 
-        maxWidth(1024.px)
+        color(Color.white)
+        padding(0.px, 15.vw)
+//        maxWidth(1024.px)
+
+        // 1366 1200 992 768 576
+
+        media(mediaMaxWidth(1700.px)) {
+            self style {
+                padding(0.px, 10.vw)
+            }
+        }
+        media(mediaMaxWidth(1500.px)) {
+            self style {
+                padding(0.px, 7.vw)
+            }
+        }
+        media(mediaMaxWidth(1366.px)) {
+            self style {
+                padding(0.px, 0.vw)
+            }
+        }
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(0.px, 5.vw)
+            }
+        }
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(0.px, 5.vw)
+            }
+        }
+    }
+
+    val aboutMeInfo by style {
+        display(DisplayStyle.Flex)
+        flexWrap(FlexWrap.Wrap)
+
+        marginTop(40.px)
+        alignSelf(AlignSelf.Center)
+    }
+
+    val aboutMeInfoItem by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+
+        flex(0, 0, 33.percent)
+
+        marginTop(20.px)
+
+        padding(0.px, 25.px)
+        boxSizing("border-box")
+
+        transitionDuration(0.4f)
+
+        media(mediaMaxWidth(1500.px)) {
+            self style {
+                flex(0, 0, 33.percent)
+            }
+        }
 
         media(mediaMaxWidth(1000.px)) {
             self style {
-                padding(0.px, 0.px)
+                flex(0, 0, 50.percent)
+            }
+        }
+
+        media(mediaMaxWidth(764.px)) {
+            self style {
+                flex(0, 0, 100.percent)
+            }
+        }
+    }
+
+    val aboutMeInfoItemContainer by style {
+        textAlign("center")
+        border(width = (0.7).px, style = LineStyle.Solid, color = Color.gray)
+        padding(40.px, 20.px)
+    }
+
+    val aboutMeInfoItemValue by style {
+        fontSize((1.3).vw)
+        fontWeight(500)
+
+        media(mediaMaxWidth(1500.px)) {
+            self style {
+                fontSize((1.6).vw)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                fontSize(6.vw)
+            }
+        }
+    }
+
+    val aboutMeInfoItemKey by style {
+        fontSize(1.vw)
+        fontWeight(400)
+        marginTop(5.px)
+
+        media(mediaMaxWidth(1500.px)) {
+            self style {
+                fontSize((1.2).vw)
+            }
+        }
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                fontSize(2.vw)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                fontSize(3.vw)
             }
         }
     }
@@ -104,51 +224,12 @@ object PangMooStyleSheet : StyleSheet() {
                 padding(0.px, 0.px)
             }
         }
-    }
 
-    val aboutMeInfo by style {
-        display(DisplayStyle.Flex)
-        flexWrap(FlexWrap.Wrap)
-
-        marginTop(40.px)
-
-        maxWidth(1024.px)
-        alignSelf(AlignSelf.Center)
-    }
-
-    val aboutMeInfoItem by style {
-        display(DisplayStyle.Flex)
-        flexDirection(FlexDirection.Column)
-
-        flex(0, 0, 33.percent)
-
-        marginTop(20.px)
-
-        padding(0.px, 25.px)
-        boxSizing("border-box")
-
-        media(mediaMaxWidth(1500.px)) {
+        media(mediaMaxWidth(768.px)) {
             self style {
-                flex(0, 0, 33.percent)
+                padding(25.vh, 5.vw)
             }
         }
-    }
-
-    val aboutMeInfoItemContainer by style {
-        textAlign("center")
-        border(width = (0.7).px, style = LineStyle.Solid, color = Color.gray)
-        padding(40.px, 20.px)
-    }
-
-    val aboutMeInfoItemValue by style {
-        fontSize(25.px)
-        fontWeight(500)
-    }
-
-    val aboutMeInfoItemKey by style {
-        fontSize(15.px)
-        fontWeight(400)
-        marginTop(5.px)
     }
 
     val button by style {

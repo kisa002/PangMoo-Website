@@ -1,11 +1,42 @@
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.produceState
+import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
 import org.w3c.dom.HTMLDivElement
+import org.w3c.dom.Window
+import org.w3c.dom.events.Event
+import org.w3c.dom.events.EventListener
 
 fun main() {
+//    val innerWidth = callbackFlow<Int> {
+//        val callback = object : EventListener {
+//            override fun handleEvent(event: Event) {
+//                trySend((event.target as? Window)?.innerWidth ?: 0)
+//            }
+//        }
+//        window.addEventListener(type = "resize", callback = callback)
+//
+//        awaitClose {
+//            window.removeEventListener(type = "resize", callback = callback)
+//        }
+//    }
+
     renderComposable(rootElementId = "root") {
+        val innerWidth = produceState(window.innerWidth) {
+            val callback = object : EventListener {
+                override fun handleEvent(event: Event) {
+                    value = (event.target as? Window)?.innerWidth ?: 0
+                }
+            }
+            window.addEventListener(type = "resize", callback = callback)
+
+            awaitDispose {
+                window.removeEventListener(type = "resize", callback = callback)
+            }
+        }
+
         Style(PangMooStyleSheet)
         Style(HeaderStyleSheet)
 
@@ -29,7 +60,7 @@ fun main() {
                 }
             }
 
-            Main({ classes(PangMooStyleSheet.main) }) {
+            Main({ classes(PangMooStyleSheet.home) }) {
                 HomeSection {
                     HomeContainer {
                         HomeInfo()
@@ -45,12 +76,13 @@ fun main() {
                                 fontWeight(900)
                             }
                         }) {
-                            Text("ABOUT ME")
+                            Text("ABOUT ME - ${innerWidth.value}")
                         }
 
                         Div(attrs = {
                             classes(PangMooStyleSheet.aboutMeInfo)
                         }) {
+                            // TODO 모바일인 경우 내용이 많으니 필터링 버튼 넣기
                             AboutMeInfoItem(title = "유광무", description = "이름")
                             AboutMeInfoItem(title = "00년생", description = "나이")
                             AboutMeInfoItem(title = "ENFJ", description = "MBTI")
@@ -121,25 +153,25 @@ private fun HeaderItem(text: String, onClick: () -> Unit) {
 
 @Composable
 private fun HomeSection(content: ContentBuilder<HTMLDivElement>) =
-    Div({ classes(PangMooStyleSheet.sectionMain) }, content = content)
+    Div({ classes(PangMooStyleSheet.sectionHome) }, content = content)
 
 @Composable
 private fun HomeContainer(content: ContentBuilder<HTMLDivElement>) =
-    Div({ classes(PangMooStyleSheet.containerMain) }, content = content)
+    Div({ classes(PangMooStyleSheet.containerHome) }, content = content)
 
 @Composable
 private fun HomeInfo() {
-    Div({ classes(PangMooStyleSheet.mainTitle) }) {
+    Div({ classes(PangMooStyleSheet.homeTitle) }) {
         Text("반갑습니다.")
     }
-    Div({ classes(PangMooStyleSheet.mainDescription) }) {
+    Div({ classes(PangMooStyleSheet.homeDescription) }) {
         Text("상상하는 것을 소프트웨어로 만들어내는 것을 좋아하는 팡무입니다. 세상에 선한 영향력으로 이롭게 발전시키기 위해 노력하고 있습니다.")
     }
 }
 
 @Composable
 private fun HomeActions() {
-    Div({ classes(PangMooStyleSheet.mainActions) }) {
+    Div({ classes(PangMooStyleSheet.homeActions) }) {
         Button({ classes(PangMooStyleSheet.button) }) {
             Text("ABOUT ME")
         }
