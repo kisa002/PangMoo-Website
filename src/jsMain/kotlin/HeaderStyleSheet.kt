@@ -16,7 +16,13 @@ object HeaderStyleSheet : StyleSheet() {
 
         transitionDuration(0.5f)
 
-        media(mediaMaxWidth(1000.px)) {
+        media(mediaMaxWidth(1500.px)) {
+            self style {
+                padding(60.px, (90 * 0.7).px, 0.px, (60 * 0.7).px)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
             self style {
                 transform {
                     translateX((-260).px)
@@ -33,7 +39,7 @@ object HeaderStyleSheet : StyleSheet() {
 
     val headerName by style {
         color(Color.white)
-        fontSize(1.em)
+        fontSize((1.2).em)
         fontWeight(800)
 
         margin(10.px)
@@ -46,7 +52,7 @@ object HeaderStyleSheet : StyleSheet() {
 
     val headerItem by style {
         color(Color.white)
-        fontSize((0.7).em)
+        fontSize((0.9).em)
         fontWeight(400)
         padding(10.px)
     }
