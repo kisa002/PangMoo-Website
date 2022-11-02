@@ -78,32 +78,17 @@ object PangMooStyleSheet : StyleSheet() {
 
     val aboutMeSection by style {
         padding(10.vh, 0.vh)
-        property("margin-left", "auto")
-        property("margin-right", "auto")
     }
 
     val aboutMeContainer by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
 
-        transitionDuration(0.4f)
+        property("margin-left", "auto")
+        property("margin-right", "auto")
 
         color(Color.white)
-//        padding(0.px, 15.vw)
-//        maxWidth(1024.px)
-
-        // 1366 1200 992 768 576
-
-//        media(mediaMaxWidth(1700.px)) {
-//            self style {
-//                padding(0.px, 10.vw)
-//            }
-//        }
-//        media(mediaMaxWidth(1500.px)) {
-//            self style {
-//                padding(0.px, 7.vw)
-//            }
-//        }
+        transitionDuration(0.4f)
 
         media(mediaMinWidth(576.px)) {
             self style {
@@ -198,18 +183,35 @@ object PangMooStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
 
-        color(Color.white)
-        padding(0.vh, 20.percent)
+        property("margin-left", "auto")
+        property("margin-right", "auto")
 
-        media(mediaMaxWidth(1000.px)) {
+        color(Color.white)
+        transitionDuration(0.4f)
+
+        media(mediaMinWidth(576.px)) {
             self style {
-                padding(0.px, 0.px)
+                maxWidth(540.px)
             }
         }
-
-        media(mediaMaxWidth(768.px)) {
+        media(mediaMinWidth(768.px)) {
             self style {
-                padding(25.vh, 5.vw)
+                maxWidth(720.px)
+            }
+        }
+        media(mediaMinWidth(1000.px)) {
+            self style {
+                maxWidth(920.px)
+            }
+        }
+        media(mediaMinWidth(1200.px)) {
+            self style {
+                maxWidth(960.px)
+            }
+        }
+        media(mediaMinWidth(1366.px)) {
+            self style {
+                maxWidth(1080.px)
             }
         }
     }
