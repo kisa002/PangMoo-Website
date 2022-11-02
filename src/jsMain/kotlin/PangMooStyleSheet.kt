@@ -213,6 +213,8 @@ object PangMooStyleSheet : StyleSheet() {
         color(Color.white)
         transitionDuration(0.4f)
 
+        paddingRight(50.px) // 공통 스타일 분리
+
         media(mediaMinWidth(576.px)) {
             self style {
                 maxWidth(540.px)
@@ -237,6 +239,47 @@ object PangMooStyleSheet : StyleSheet() {
             self style {
                 maxWidth(1080.px)
             }
+        }
+    }
+
+    val skillItemContainer by style {
+        width(100.percent)
+        display(DisplayStyle.Flex)
+        flexFlow(FlexDirection.Row, FlexWrap.Wrap)
+        justifyContent(JustifyContent.SpaceBetween)
+        marginTop(50.px)
+        marginLeft(20.px)
+        marginRight(20.px)
+    }
+
+    val skillItem by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        flex(0, 0, 48.percent)
+
+        padding(20.px, 0.px)
+
+        self + " div:first-child" style {
+            width(100.percent)
+            display(DisplayStyle.Flex)
+            justifyContent(JustifyContent.SpaceBetween)
+
+            self + " span:first-child" style {
+                color(Color.white)
+                fontSize(20.px)
+                fontWeight(500)
+            }
+
+            self + " span:last-child" style {
+                color(Color.lightgray)
+                fontSize(15.px)
+                fontWeight(100)
+            }
+        }
+
+        self + " div:last-child" style {
+            display(DisplayStyle.Flex)
+            flexDirection(FlexDirection.Column)
         }
     }
 

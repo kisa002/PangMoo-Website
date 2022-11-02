@@ -107,91 +107,51 @@ fun main() {
                             Text("SKILLS")
                         }
 
-                        Div(attrs = {
-                            style {
-                                display(DisplayStyle.Flex)
-                                flexDirection(FlexDirection.Row)
-
-                                marginTop(50.px)
-                            }
-                        }) {
-                            Div(attrs = {
-                                style {
-                                    width(100.percent)
-                                    display(DisplayStyle.Flex)
-                                    flexFlow(FlexDirection.Row, FlexWrap.Wrap)
-                                    justifyContent(JustifyContent.SpaceBetween)
-                                    marginLeft(20.px)
-                                    marginRight(20.px)
-                                }
-                            }) {
-                                repeat(4) {
-                                    Div(attrs = {
-                                        style {
-                                            display(DisplayStyle.Flex)
-                                            flexDirection(FlexDirection.Column)
-//                                            alignItems(AlignItems.Center)
-                                            flex(0, 0, 48.percent)
-
-                                            padding(20.px, 0.px)
-                                        }
-                                    }) {
-                                        Div(attrs = {
-                                            style {
-                                                width(100.percent)
-                                                display(DisplayStyle.Flex)
-                                                justifyContent(JustifyContent.SpaceBetween)
-                                            }
-                                        }) {
-                                            Span(attrs = {
-                                                style {
-                                                    color(Color.white)
-                                                    fontSize(20.px)
-                                                    fontWeight(500)
-                                                }
-                                            }) {
-                                                Text("Android: $it")
-                                            }
-
-                                            Span(attrs = {
-                                                style {
-                                                    color(Color.gray)
-                                                    fontSize(15.px)
-                                                    fontWeight(100)
-                                                }
-                                            }) {
-                                                Text("80%")
-                                            }
-                                        }
-                                        Div(attrs = {
-                                            style {
-                                                display(DisplayStyle.Flex)
-                                                flexDirection(FlexDirection.Column)
-                                            }
-                                        }) {
-                                            Div(attrs = {
-                                                style {
-                                                    width(100.percent)
-                                                    backgroundColor(Color.gray)
-
-                                                    marginTop(15.px)
-                                                }
-                                            }) {
-                                                Div(attrs = {
-                                                    style {
-                                                        width(80.percent)
-                                                        height(5.px)
-                                                        backgroundColor(Colors.primary)
-                                                    }
-                                                })
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                        SkillItemContainer {
+                            SkillItem(name = "Android", percent = 85)
+                            SkillItem(name = "Unity", percent = 70)
+                            SkillItem(name = "Communication", percent = 75)
+                            SkillItem(name = "PHP", percent = 65)
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SkillItemContainer(content: ContentBuilder<HTMLDivElement>) =
+    Div(attrs = { classes(PangMooStyleSheet.skillItemContainer) }, content = content)
+
+@Composable
+private fun SkillItem(name: String, percent: Int) {
+    Div(attrs = { classes(PangMooStyleSheet.skillItem) }) {
+        Div {
+            Span {
+                Text(name)
+            }
+
+            Span {
+                Text("${percent}%")
+            }
+        }
+        Div {
+            Div(attrs = {
+                style {
+                    width(100.percent)
+                    backgroundColor(Color.gray)
+
+                    marginTop(15.px)
+                }
+            }) {
+                Div(attrs = {
+                    style {
+                        width(percent.percent)
+                        height(5.px)
+                        backgroundColor(Colors.primary)
+                    }
+                })
             }
         }
     }
