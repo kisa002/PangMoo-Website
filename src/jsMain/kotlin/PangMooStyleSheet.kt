@@ -259,6 +259,12 @@ object PangMooStyleSheet : StyleSheet() {
 
         padding(20.px, 0.px)
 
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                flex(0, 0, 100.percent)
+            }
+        }
+
         self + " div:first-child" style {
             width(100.percent)
             display(DisplayStyle.Flex)
