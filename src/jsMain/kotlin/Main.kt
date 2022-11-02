@@ -89,9 +89,9 @@ fun main() {
                             AboutMeInfoItem(title = "아우토크립트", description = "회사")
                             AboutMeInfoItem(title = "한국공학대학교", description = "학교")
                             AboutMeInfoItem(title = "NULL", description = "여자친구")
-                            AboutMeInfoItem(title = "안드로이드", description = "자신있는 플랫폼")
-                            AboutMeInfoItem(title = "Kotlin Multiplatform", description = "최근 관심 기술")
-                            AboutMeInfoItem(title = "Coroutine Flow", description = "좋아하는 기술")
+                            AboutMeInfoItem(title = "Android", description = "주력 플랫폼")
+                            AboutMeInfoItem(title = "KMM & KMP", description = "최근 관심 기술")
+                            AboutMeInfoItem(title = "20+회", description = "해커톤 참여 횟수")
                         }
                     }
                 }
