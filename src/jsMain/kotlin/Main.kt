@@ -104,7 +104,91 @@ fun main() {
                                 fontWeight(900)
                             }
                         }) {
-                            Text("SKILL")
+                            Text("SKILLS")
+                        }
+
+                        Div(attrs = {
+                            style {
+                                display(DisplayStyle.Flex)
+                                flexDirection(FlexDirection.Row)
+
+                                marginTop(50.px)
+                            }
+                        }) {
+                            Div(attrs = {
+                                style {
+                                    width(100.percent)
+                                    display(DisplayStyle.Flex)
+                                    flexFlow(FlexDirection.Row, FlexWrap.Wrap)
+                                    justifyContent(JustifyContent.SpaceBetween)
+                                    marginLeft(20.px)
+                                    marginRight(20.px)
+                                }
+                            }) {
+                                repeat(4) {
+                                    Div(attrs = {
+                                        style {
+                                            display(DisplayStyle.Flex)
+                                            flexDirection(FlexDirection.Column)
+//                                            alignItems(AlignItems.Center)
+                                            flex(0, 0, 48.percent)
+
+                                            padding(20.px, 0.px)
+                                        }
+                                    }) {
+                                        Div(attrs = {
+                                            style {
+                                                width(100.percent)
+                                                display(DisplayStyle.Flex)
+                                                justifyContent(JustifyContent.SpaceBetween)
+                                            }
+                                        }) {
+                                            Span(attrs = {
+                                                style {
+                                                    color(Color.white)
+                                                    fontSize(20.px)
+                                                    fontWeight(500)
+                                                }
+                                            }) {
+                                                Text("Android: $it")
+                                            }
+
+                                            Span(attrs = {
+                                                style {
+                                                    color(Color.gray)
+                                                    fontSize(15.px)
+                                                    fontWeight(100)
+                                                }
+                                            }) {
+                                                Text("80%")
+                                            }
+                                        }
+                                        Div(attrs = {
+                                            style {
+                                                display(DisplayStyle.Flex)
+                                                flexDirection(FlexDirection.Column)
+                                            }
+                                        }) {
+                                            Div(attrs = {
+                                                style {
+                                                    width(100.percent)
+                                                    backgroundColor(Color.gray)
+
+                                                    marginTop(15.px)
+                                                }
+                                            }) {
+                                                Div(attrs = {
+                                                    style {
+                                                        width(80.percent)
+                                                        height(5.px)
+                                                        backgroundColor(Colors.primary)
+                                                    }
+                                                })
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

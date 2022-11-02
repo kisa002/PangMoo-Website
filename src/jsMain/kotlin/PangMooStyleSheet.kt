@@ -78,6 +78,18 @@ object PangMooStyleSheet : StyleSheet() {
 
     val aboutMeSection by style {
         padding(10.vh, 0.vh)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(10.vh, 0.vh)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(0.vh, 5.vw)
+            }
+        }
     }
 
     val aboutMeContainer by style {
@@ -177,6 +189,18 @@ object PangMooStyleSheet : StyleSheet() {
 
     val skillSection by style {
         padding(10.vh, 0.vh)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(10.vh, 0.px)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(10.vh, 5.vw)
+            }
+        }
     }
 
     val skillContainer by style {
