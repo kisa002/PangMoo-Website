@@ -104,10 +104,54 @@ fun main() {
                                 fontWeight(900)
                             }
                         }) {
-                            Text("SKILL")
+                            Text("SKILLS")
+                        }
+
+                        SkillItemContainer {
+                            SkillItem(name = "Android", percent = 85)
+                            SkillItem(name = "Unity", percent = 70)
+                            SkillItem(name = "Communication", percent = 75)
+                            SkillItem(name = "PHP", percent = 65)
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SkillItemContainer(content: ContentBuilder<HTMLDivElement>) =
+    Div(attrs = { classes(PangMooStyleSheet.skillItemContainer) }, content = content)
+
+@Composable
+private fun SkillItem(name: String, percent: Int) {
+    Div(attrs = { classes(PangMooStyleSheet.skillItem) }) {
+        Div {
+            Span {
+                Text(name)
+            }
+
+            Span {
+                Text("${percent}%")
+            }
+        }
+        Div {
+            Div(attrs = {
+                style {
+                    width(100.percent)
+                    backgroundColor(Color.gray)
+
+                    marginTop(15.px)
+                }
+            }) {
+                Div(attrs = {
+                    style {
+                        width(percent.percent)
+                        height(5.px)
+                        backgroundColor(Colors.primary)
+                    }
+                })
             }
         }
     }

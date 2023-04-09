@@ -78,6 +78,18 @@ object PangMooStyleSheet : StyleSheet() {
 
     val aboutMeSection by style {
         padding(10.vh, 0.vh)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(10.vh, 0.vh)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(0.vh, 5.vw)
+            }
+        }
     }
 
     val aboutMeContainer by style {
@@ -177,6 +189,18 @@ object PangMooStyleSheet : StyleSheet() {
 
     val skillSection by style {
         padding(10.vh, 0.vh)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(10.vh, 0.px)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(10.vh, 5.vw)
+            }
+        }
     }
 
     val skillContainer by style {
@@ -188,6 +212,8 @@ object PangMooStyleSheet : StyleSheet() {
 
         color(Color.white)
         transitionDuration(0.4f)
+
+        paddingRight(50.px) // 공통 스타일 분리
 
         media(mediaMinWidth(576.px)) {
             self style {
@@ -213,6 +239,53 @@ object PangMooStyleSheet : StyleSheet() {
             self style {
                 maxWidth(1080.px)
             }
+        }
+    }
+
+    val skillItemContainer by style {
+        width(100.percent)
+        display(DisplayStyle.Flex)
+        flexFlow(FlexDirection.Row, FlexWrap.Wrap)
+        justifyContent(JustifyContent.SpaceBetween)
+        marginTop(50.px)
+        marginLeft(20.px)
+        marginRight(20.px)
+    }
+
+    val skillItem by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        flex(0, 0, 48.percent)
+
+        padding(20.px, 0.px)
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                flex(0, 0, 100.percent)
+            }
+        }
+
+        self + " div:first-child" style {
+            width(100.percent)
+            display(DisplayStyle.Flex)
+            justifyContent(JustifyContent.SpaceBetween)
+
+            self + " span:first-child" style {
+                color(Color.white)
+                fontSize(20.px)
+                fontWeight(500)
+            }
+
+            self + " span:last-child" style {
+                color(Color.lightgray)
+                fontSize(15.px)
+                fontWeight(100)
+            }
+        }
+
+        self + " div:last-child" style {
+            display(DisplayStyle.Flex)
+            flexDirection(FlexDirection.Column)
         }
     }
 
