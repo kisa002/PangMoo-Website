@@ -344,6 +344,19 @@ object PangMooStyleSheet : StyleSheet() {
         }
     }
 
+    val experienceTable by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Row)
+        justifyContent(JustifyContent.SpaceBetween)
+
+        marginLeft(20.px)
+        marginRight(20.px)
+    }
+
+    val experienceColumn by style {
+        width(48.percent)
+    }
+
     val button by style {
         backgroundColor(Color.black)
         padding(15.px)

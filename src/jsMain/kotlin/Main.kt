@@ -120,21 +120,8 @@ fun main() {
                             }
                         })
 
-                        Div(attrs = {
-                            style {
-                                display(DisplayStyle.Flex)
-                                flexDirection(FlexDirection.Row)
-                                justifyContent(JustifyContent.SpaceBetween)
-
-                                marginLeft(20.px)
-                                marginRight(20.px)
-                            }
-                        }) {
-                            Div(attrs = {
-                                style {
-                                    width(48.percent)
-                                }
-                            }) {
+                        Div(attrs = { classes(PangMooStyleSheet.experienceTable) }) {
+                            Div(attrs = { classes(PangMooStyleSheet.experienceColumn) }) {
                                 ExperienceItem(
                                     date = "2021.09 ~ 2022.12",
                                     title = "아우토크립트 안드로이드 개발 팀장",
@@ -154,11 +141,7 @@ fun main() {
                                 )
                             }
 
-                            Div(attrs = {
-                                style {
-                                    width(48.percent)
-                                }
-                            }) {
+                            Div(attrs = { classes(PangMooStyleSheet.experienceColumn) }) {
                                 ExperienceItem(
                                     date = "2022 ~",
                                     title = "GDG Songdo Organizer",
