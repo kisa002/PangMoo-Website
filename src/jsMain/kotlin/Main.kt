@@ -1,6 +1,8 @@
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.produceState
 import kotlinx.browser.window
+import org.jetbrains.compose.web.attributes.ATarget
+import org.jetbrains.compose.web.attributes.target
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
@@ -154,7 +156,8 @@ fun main() {
                                 name = "충전국밥",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "주변 전기차 충전기 위치와 요금, 충전기 종류 등 상세 정보를 제공합니다.\n또한 충전카드를 앱에 태깅하여 등록하면 충전국밥 앱을 통해 결제가 가능합니다."
+                                description = "주변 전기차 충전기 위치와 요금, 충전기 종류 등 상세 정보를 제공합니다.\n또한 충전카드를 앱에 태깅하여 등록하면 충전국밥 앱을 통해 결제가 가능합니다.",
+                                href = "https://charging.autocrypt.co.kr/"
                             )
 
                             ProjectItem(
@@ -162,15 +165,17 @@ fun main() {
                                 name = "GreeGo",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "제주도에서 진행하는 사업으로, 퍼스널 모빌리티(전기 자전거, 전동 킥보드, 전기 오토바이, 공공자전거)를 대여할 수 있으며 주변 관광지 및 실시간 버스 위치, 맞춤형 길 안내 등 확인할 수 있습니다."
+                                description = "제주도에서 진행하는 사업으로, 퍼스널 모빌리티(전기 자전거, 전동 킥보드, 전기 오토바이, 공공자전거)를 대여할 수 있으며 주변 관광지 및 실시간 버스 위치, 맞춤형 길 안내 등 확인할 수 있습니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.scjeju&hl=ko&gl=US"
                             )
 
                             ProjectItem(
                                 type = "AOS",
-                                name = "아이맘택시 - 은평구 바우처택시",
+                                name = "아이맘택시",
                                 role = "유지보수",
                                 date = "2022",
-                                description = "임산부와 영유아 가정을 위해 은평구청에서 진행되는 택시 서비스로, 승객은 배차를 요청할 수 있으며 기사의 운행 상태 및 위치를 실시간으로 확인할 수 있습니다."
+                                description = "임산부와 영유아 가정을 위해 은평구청에서 진행되는 택시 서비스로, 승객은 배차를 요청할 수 있으며 기사의 운행 상태 및 위치를 실시간으로 확인할 수 있습니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.namu.pax&hl=ko&gl=US"
                             )
 
                             ProjectItem(
@@ -178,7 +183,8 @@ fun main() {
                                 name = "아이맘택시(기사용)",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "임산부와 영유아 가정을 위해 은평구청에서 진행되는 택시 서비스로, 기사의 출퇴근 및 탑승/하차 등의 운행 상태를 기록합니다. 모든 상태는 지속적으로 공유되기에 승객앱에서 기사의 위치를 실시간으로 확인할 수 있습니다."
+                                description = "임산부와 영유아 가정을 위해 은평구청에서 진행되는 택시 서비스로, 기사의 출퇴근 및 탑승/하차 등의 운행 상태를 기록합니다. 모든 상태는 지속적으로 공유되기에 승객앱에서 기사의 위치를 실시간으로 확인할 수 있습니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.namu.dvr&hl=ko&gl=US"
                             )
 
                             ProjectItem(
@@ -186,7 +192,8 @@ fun main() {
                                 name = "케이콜(기사님용)",
                                 role = "서브 개발",
                                 date = "2021-2022",
-                                description = "케이콜 기사님을 위한 앱으로, 배차 요청 시 콜을 표시하며 기사는 수락/거절할 수 있습니다. 또한 출발지와 목적지 및 기사의 위치를 앱 내 지도를 통해 실시간으로 확인할 수 있습니다."
+                                description = "케이콜 기사님을 위한 앱으로, 배차 요청 시 콜을 표시하며 기사는 수락/거절할 수 있습니다. 또한 출발지와 목적지 및 기사의 위치를 앱 내 지도를 통해 실시간으로 확인할 수 있습니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.kcalldvr&hl=ko&gl=US"
                             )
 
                             ProjectItem(
@@ -194,7 +201,8 @@ fun main() {
                                 name = "버스닷",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "여의도에서 운행되고 있는 아우토크립트 직원을 위한 출퇴근 버스 승객용 앱 입니다."
+                                description = "여의도에서 운행되고 있는 아우토크립트 직원을 위한 출퇴근 버스 승객용 앱 입니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.busdot.pax&hl=ko&gl=US"
                             )
 
                             ProjectItem(
@@ -202,7 +210,8 @@ fun main() {
                                 name = "버스닷(기사용)",
                                 role = "서브 개발",
                                 date = "2021-2022",
-                                description = "여의도에서 운행되고 있는 아우토크립트 직원을 위한 출퇴근 버스 기사용 앱 입니다."
+                                description = "여의도에서 운행되고 있는 아우토크립트 직원을 위한 출퇴근 버스 기사용 앱 입니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.busdot.dvr&hl=ko&gl=US"
                             )
 
                             ProjectItem(
@@ -210,7 +219,8 @@ fun main() {
                                 name = "세이브 마스크",
                                 role = "디자인 제외 1인 개발",
                                 date = "2021",
-                                description = "의료 분야 급상승 인기 앱 3위 달성한 공적마스크 모아보기 앱 입니다. 사용자가 구매할 수 있는 요일이 오면 알람으로 알려주며, 내 주변에 마스크를 보유한 약국을 편하게 확인 할 수 있습니다. 또한 주변에 물량 있는 마스크를 따로 모아보는 것을 제공합니다."
+                                description = "의료 분야 급상승 인기 앱 3위 달성한 공적마스크 모아보기 앱 입니다. 사용자가 구매할 수 있는 요일이 오면 알람으로 알려주며, 내 주변에 마스크를 보유한 약국을 편하게 확인 할 수 있습니다. 또한 주변에 물량 있는 마스크를 따로 모아보는 것을 제공합니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.haeyum.savemask"
                             )
 
                             ProjectItem(
@@ -218,7 +228,8 @@ fun main() {
                                 name = "DRUNT",
                                 role = "디자인 제외 1인 개발",
                                 date = "2019",
-                                description = "[ Drunt, Draw your own story ] 재미있게 그리고 느끼고 소통하는 VR 드로잉툴로 HTC VIVE사의 신기술인 SRWorks를 이용하여 혼합현실에서 드로잉을 할 수 있도록 구현하였습니다. 또한 드로잉한 작품을 obj로 추출 기능을 제공함으로써 3D 프린터 장벽을 낮추었습니다."
+                                description = "[ Drunt, Draw your own story ] 재미있게 그리고 느끼고 소통하는 VR 드로잉툴로 HTC VIVE사의 신기술인 SRWorks를 이용하여 혼합현실에서 드로잉을 할 수 있도록 구현하였습니다. 또한 드로잉한 작품을 obj로 추출 기능을 제공함으로써 3D 프린터 장벽을 낮추었습니다.",
+                                href = "https://www.youtube.com/watch?v=1PbxeVkxfkk"
                             )
 
                             ProjectItem(
@@ -226,7 +237,8 @@ fun main() {
                                 name = "VITEDS",
                                 role = "디자인 제외 1인 개발",
                                 date = "2019",
-                                description = "VR/AR 쇼핑몰로 소비자는 VR/AR에서 가구를 배치하여 직접 인테리어를 할 수 있으며, 인테리어된 방은 클라우드로 동기화되어 실시간으로 VR에서 만든 방을 AR에서 확인할 수 있습니다. 또한 EYE TRACKING 기술을 통해 기업은 자사 제품이 얼마나 사용자들의 시선을 받았는지 통계를 제공합니다. 대회 우승으로 HTC VIVE 본사 초청 및 대만 United XR 행사장에서 부스를 전시하였습니다."
+                                description = "VR/AR 쇼핑몰로 소비자는 VR/AR에서 가구를 배치하여 직접 인테리어를 할 수 있으며, 인테리어된 방은 클라우드로 동기화되어 실시간으로 VR에서 만든 방을 AR에서 확인할 수 있습니다. 또한 EYE TRACKING 기술을 통해 기업은 자사 제품이 얼마나 사용자들의 시선을 받았는지 통계를 제공합니다. 대회 우승으로 HTC VIVE 본사 초청 및 대만 United XR 행사장에서 부스를 전시하였습니다.",
+                                href = "https://www.youtube.com/watch?v=NEQlkGCJH44"
                             )
 
                             ProjectItem(
@@ -234,7 +246,8 @@ fun main() {
                                 name = "트레리티 - AR 길안내",
                                 role = "디자인 제외 1인 개발",
                                 date = "2018",
-                                description = "SK Planet에서 주최하는 STA+C 2018 대회 최우수 수상 작품으로 AR 지도 길안내 서비스 입니다."
+                                description = "SK Planet에서 주최하는 STA+C 2018 대회 최우수 수상 작품으로 AR 지도 길안내 서비스 입니다.",
+                                href = "https://www.youtube.com/watch?v=Ljaa8M-oIaU"
                             )
 
                             ProjectItem(
@@ -242,15 +255,17 @@ fun main() {
                                 name = "경영시민",
                                 role = "1인 개발",
                                 date = "2017",
-                                description = "2018년 기준, 전교생 90% 이상이 사용하는 평촌경영고등학교 챗봇으로, 오늘/내일/이달 날씨 및 급식과 학사 일정, 학사 공지 등을 제공합니다."
+                                description = "2018년 기준 전교생 90% 이상이 사용하는 평촌경영고등학교 챗봇으로, 오늘/내일/이달 날씨 및 급식과 학사 일정, 학사 공지 등을 제공합니다. 졸업 이후 유지보수 개발자 부재로 인해 지원 중단되었습니다.",
+                                href = "http://pf.kakao.com/_HlDVd"
                             )
 
                             ProjectItem(
                                 type = "GAME",
-                                name = "음료수회사 경영하기 [타이쿤식 노가다 돈벌기게임]",
+                                name = "음료수회사 경영하기",
                                 role = "1인 개발",
                                 date = "2015",
-                                description = "한국전쟁2030 개발 이후 해당 기획자님과 합작으로 기획 및 디자인을 제외 모든 부분을 혼자 개발하였습니다. 누적 다운로드 수 100,000회 이상 달성하였습니다."
+                                description = "한국전쟁2030 개발 이후 해당 기획자님과 합작으로 기획 및 디자인을 제외 모든 부분을 혼자 개발하였습니다. 누적 다운로드 수 100,000회 이상 달성하였습니다.",
+                                href = "https://m.apkpure.com/kr/%EC%9D%8C%EB%A3%8C%EC%88%98%ED%9A%8C%EC%82%AC-%EA%B2%BD%EC%98%81%ED%95%98%EA%B8%B0-%ED%83%80%EC%9D%B4%EC%BF%A4%EC%8B%9D-%EB%85%B8%EA%B0%80%EB%8B%A4-%EB%8F%88%EB%B2%8C%EA%B8%B0%EA%B2%8C%EC%9E%84/com.haeyum.Drinks_Company_Management"
                             )
 
                             ProjectItem(
@@ -258,7 +273,8 @@ fun main() {
                                 name = "한국전쟁2030",
                                 role = "1인 개발",
                                 date = "2015",
-                                description = "초등학교 시절 좋아하던 Flash 게임을 모바일로 만들고 싶어 직접 원 제작자와 미팅 및 계약하여 합작으로 기획 및 디자인을 제외 모든 부분을 혼자 개발하였습니다. 누적 다운로드 수 500,000회 이상 달성하였습니다."
+                                description = "초등학교 시절 좋아하던 Flash 게임을 모바일로 만들고 싶어 직접 원 제작자와 미팅 및 계약하여 합작으로 기획 및 디자인을 제외 모든 부분을 혼자 개발하였습니다. 누적 다운로드 수 500,000회 이상 달성하였습니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.HAEYUM.Korea_War_2030"
                             )
 
                             ProjectItem(
@@ -266,7 +282,8 @@ fun main() {
                                 name = "직업키우기2",
                                 role = "1인 개발",
                                 date = "2014",
-                                description = "직업키우기의 후속작으로 기존 방치형 게임 스타일과 다르게 클릭커 스타일로 구현된 게임 입니다. 마찬가지로 Flash 게임의 모티브를 얻어 개발하였습니다. 누적 다운로드 수 100,000회 이상 달성하였습니다."
+                                description = "직업키우기의 후속작으로 기존 방치형 게임 스타일과 다르게 클릭커 스타일로 구현된 게임 입니다. 마찬가지로 Flash 게임의 모티브를 얻어 개발하였습니다. 누적 다운로드 수 100,000회 이상 달성하였습니다.",
+                                href = "https://play.google.com/store/apps/details?id=com.Heyum.RaiseJob2"
                             )
 
                             ProjectItem(
@@ -274,7 +291,8 @@ fun main() {
                                 name = "직업키우기",
                                 role = "1인 개발",
                                 date = "2013",
-                                description = "모바일 방치형 게임 장르가 알려지지 않은 시절, Flash 게임의 모티브를 얻어 중학교 1학년 때 플레이스토어에 업로드한 게임 입니다. 이때 최초로 '키우기' 라는 타이틀을 사용하였으며, 누적 다운로드 수 100,000회 이상 달성하였습니다."
+                                description = "모바일 방치형 게임 장르가 알려지지 않은 시절, Flash 게임의 모티브를 얻어 중학교 1학년 때 플레이스토어에 업로드한 게임 입니다. 이때 최초로 '키우기' 라는 타이틀을 사용하였으며, 누적 다운로드 수 100,000회 이상 달성하였습니다.",
+                                href = "https://m.apkpure.com/kr/%EC%83%88%EB%A1%9C%EC%9A%B4%EC%9E%A5%EB%A5%B4-%EC%A7%81%EC%97%85%ED%82%A4%EC%9A%B0%EA%B8%B01/com.ideasoft.RaiseJob_1"
                             )
                         }
                     }
@@ -285,14 +303,11 @@ fun main() {
 }
 
 @Composable
-private fun ProjectItem(type: String, name: String, role: String, date: String, description: String) {
-    Div(attrs = {
-        style {
-            flex(1)
-            display(DisplayStyle.Flex)
-            flexDirection(FlexDirection.Column)
-        }
-    }) {
+private fun ProjectItem(type: String, name: String, role: String, date: String, description: String, href: String) {
+    A(attrs = {
+        classes(PangMooStyleSheet.projectItem)
+        target(ATarget.Blank)
+    }, href = href) {
         Div(attrs = {
             style {
                 display(DisplayStyle.Flex)
@@ -306,6 +321,7 @@ private fun ProjectItem(type: String, name: String, role: String, date: String, 
                 style {
                     display(DisplayStyle.Flex)
                     flexDirection(FlexDirection.Column)
+                    width(100.percent)
                 }
             }) {
                 Div(attrs = {
@@ -333,6 +349,15 @@ private fun ProjectItem(type: String, name: String, role: String, date: String, 
                     }) {
                         Text("${role}_${date}")
                     }
+
+                    I(attrs = {
+                        classes("fa-solid", "fa-arrow-up-right-from-square")
+                        style {
+                            color(Color.lightslategray)
+                            marginLeft(10.px)
+                            paddingBottom(3.px)
+                        }
+                    })
                 }
 
                 Span(attrs = {
@@ -345,13 +370,6 @@ private fun ProjectItem(type: String, name: String, role: String, date: String, 
                 }
             }
         }
-        Div(attrs = {
-            style {
-                width(100.percent)
-                height(1.px)
-                backgroundColor(Color.darkgray)
-            }
-        })
     }
 }
 

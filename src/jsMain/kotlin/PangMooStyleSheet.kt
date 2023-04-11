@@ -245,7 +245,7 @@ object PangMooStyleSheet : StyleSheet() {
     }
 
     val skillItemContainer by style {
-        width(100.percent)
+//        width(100.percent)
         display(DisplayStyle.Flex)
         flexFlow(FlexDirection.Row, FlexWrap.Wrap)
         justifyContent(JustifyContent.SpaceBetween)
@@ -410,6 +410,40 @@ object PangMooStyleSheet : StyleSheet() {
         media(mediaMinWidth(1366.px)) {
             self style {
                 maxWidth(1080.px)
+            }
+        }
+    }
+
+    val projectItem by style {
+        flex(1)
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+        backgroundColor(Color.transparent)
+
+        color(Colors.primary)
+        textDecoration("none")
+
+        border(width = 1.px, style = LineStyle.Solid, color = Color.transparent)
+        property("border-bottom", "solid 1px darkgray")
+
+        paddingLeft(8.px)
+        paddingRight(8.px)
+
+        transitionDuration(0.3f)
+        hover(self) style {
+            border(width = 1.px, style = LineStyle.Solid, color = Color.darkgray)
+//            borderRadius(16.px)
+
+            backgroundColor(Color("#333333"))
+        }
+
+        self + " svg" style {
+            display(DisplayStyle.None)
+        }
+
+        hover {
+            self + " svg" style {
+                display(DisplayStyle.InlineBlock)
             }
         }
     }
