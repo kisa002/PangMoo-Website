@@ -348,6 +348,7 @@ object PangMooStyleSheet : StyleSheet() {
 
     val experienceTable by style {
         display(DisplayStyle.Flex)
+        flexWrap(FlexWrap.Wrap)
         flexDirection(FlexDirection.Row)
         justifyContent(JustifyContent.SpaceBetween)
 
@@ -357,6 +358,12 @@ object PangMooStyleSheet : StyleSheet() {
 
     val experienceColumn by style {
         width(48.percent)
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                width(100.percent)
+            }
+        }
     }
 
     val projectSection by style {
