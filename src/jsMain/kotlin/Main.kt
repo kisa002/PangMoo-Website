@@ -152,6 +152,33 @@ fun main() {
                             }
                         }) {
                             ProjectItem(
+                                type = "Compose Web",
+                                name = "PangMoo",
+                                role = "1인 개발",
+                                date = "2023~",
+                                description = "이 사이트를 Compose Web을 활용하여 개발하였습니다. 완성 후 skiko로 리메이크 할 예정입니다.",
+                                href = "/"
+                            )
+
+                            ProjectItem(
+                                type = "Plugin",
+                                name = "Naming Fox",
+                                role = "1인 개발",
+                                date = "2023",
+                                description = "GPT-3를 활용하여 IntelliJ 계열 IDE에서 개발자의 최대 난제. 변수와 함수 이름을 지어주는 플러그인을 개발하였습니다. (Client/Server with Ktor)",
+                                href = "https://github.com/kisa002/NamingFox"
+                            )
+
+                            ProjectItem(
+                                type = "Kotlin Multiplatform",
+                                name = "TRANSER",
+                                role = "1인 개발",
+                                date = "2023",
+                                description = "AOS/Desktop을 지원하는 번역 유틸리티로 KMP의 이점을 살리기 위해 단순히 로직 공유만이 아닌 각 네이티브 기능을 활용에 초점을 두었습니다.",
+                                href = "https://github.com/kisa002/Transer"
+                            )
+
+                            ProjectItem(
                                 type = "AOS",
                                 name = "충전국밥",
                                 role = "메인 개발",
@@ -165,7 +192,7 @@ fun main() {
                                 name = "GreeGo",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "제주도에서 진행하는 사업으로, 퍼스널 모빌리티(전기 자전거, 전동 킥보드, 전기 오토바이, 공공자전거)를 대여할 수 있으며 주변 관광지 및 실시간 버스 위치, 맞춤형 길 안내 등 확인할 수 있습니다.",
+                                description = "제주도에서 진행하는 사업으로, 퍼스널 모빌리티를 대여할 수 있으며 주변 관광지 및 실시간 버스 위치, 맞춤형 길 안내 등 확인할 수 있습니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.scjeju&hl=ko&gl=US"
                             )
 
@@ -174,7 +201,7 @@ fun main() {
                                 name = "아이맘택시",
                                 role = "유지보수",
                                 date = "2022",
-                                description = "임산부와 영유아 가정을 위해 은평구청에서 진행되는 택시 서비스로, 승객은 배차를 요청할 수 있으며 기사의 운행 상태 및 위치를 실시간으로 확인할 수 있습니다.",
+                                description = "은평구청 정부사 업으로 운영되는 택시 서비스로, 택시 예약 및 기사의 운행 상태와 위치를 실시간으로 확인할 수 있습니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.namu.pax&hl=ko&gl=US"
                             )
 
@@ -183,7 +210,7 @@ fun main() {
                                 name = "아이맘택시(기사용)",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "임산부와 영유아 가정을 위해 은평구청에서 진행되는 택시 서비스로, 기사의 출퇴근 및 탑승/하차 등의 운행 상태를 기록합니다. 모든 상태는 지속적으로 공유되기에 승객앱에서 기사의 위치를 실시간으로 확인할 수 있습니다.",
+                                description = "은평구청 정부사 업으로 운영되는 택시 서비스로, 콜 수락/거부 및 기사의 위치/상태를 실시간으로 동기화합니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.namu.dvr&hl=ko&gl=US"
                             )
 
@@ -192,7 +219,7 @@ fun main() {
                                 name = "케이콜(기사님용)",
                                 role = "서브 개발",
                                 date = "2021-2022",
-                                description = "케이콜 기사님을 위한 앱으로, 배차 요청 시 콜을 표시하며 기사는 수락/거절할 수 있습니다. 또한 출발지와 목적지 및 기사의 위치를 앱 내 지도를 통해 실시간으로 확인할 수 있습니다.",
+                                description = "케이콜 기사앱으로 실시간 콜 카드 수신할 수 있으며, 출발지와 목적지 경로를 안내합니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.kcalldvr&hl=ko&gl=US"
                             )
 
@@ -219,7 +246,7 @@ fun main() {
                                 name = "세이브 마스크",
                                 role = "디자인 제외 1인 개발",
                                 date = "2021",
-                                description = "의료 분야 급상승 인기 앱 3위 달성한 공적마스크 모아보기 앱 입니다. 사용자가 구매할 수 있는 요일이 오면 알람으로 알려주며, 내 주변에 마스크를 보유한 약국을 편하게 확인 할 수 있습니다. 또한 주변에 물량 있는 마스크를 따로 모아보는 것을 제공합니다.",
+                                description = "의료 분야 급상승 인기 앱 3위 달성한 공적마스크 모아보기 앱으로 구매 가능 요일에 알람 제공 및 주변 마스크 보유한 약국을 편하게 확인 할 수 있습니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.haeyum.savemask"
                             )
 
@@ -237,7 +264,7 @@ fun main() {
                                 name = "VITEDS",
                                 role = "디자인 제외 1인 개발",
                                 date = "2019",
-                                description = "VR/AR 쇼핑몰로 소비자는 VR/AR에서 가구를 배치하여 직접 인테리어를 할 수 있으며, 인테리어된 방은 클라우드로 동기화되어 실시간으로 VR에서 만든 방을 AR에서 확인할 수 있습니다. 또한 EYE TRACKING 기술을 통해 기업은 자사 제품이 얼마나 사용자들의 시선을 받았는지 통계를 제공합니다. 대회 우승으로 HTC VIVE 본사 초청 및 대만 United XR 행사장에서 부스를 전시하였습니다.",
+                                description = "VR/AR 쇼핑몰로 소비자는 VR/AR에서 가구를 배치하여 직접 인테리어 및 클라우드로 동기화되어 VR에서 만든 방을 실시간으로 AR에서 확인할 수 있습니다. 또한 EYE TRACKING 기술을 통해 기업은 자사 제품이 얼마나 사용자들의 시선을 받았는지 통계를 제공합니다. 대회 우승으로 HTC VIVE 본사 초청 및 대만 United XR 행사장에서 부스를 전시하였습니다.",
                                 href = "https://www.youtube.com/watch?v=NEQlkGCJH44"
                             )
 
@@ -255,7 +282,7 @@ fun main() {
                                 name = "경영시민",
                                 role = "1인 개발",
                                 date = "2017",
-                                description = "2018년 기준 전교생 90% 이상이 사용하는 평촌경영고등학교 챗봇으로, 오늘/내일/이달 날씨 및 급식과 학사 일정, 학사 공지 등을 제공합니다. 졸업 이후 유지보수 개발자 부재로 인해 지원 중단되었습니다.",
+                                description = "2018년 기준 전교생 90% 이상이 사용하는 평촌경영고등학교 챗봇으로, 오늘/내일/이달 날씨 및 급식과 학사 일정, 학사 공지 등을 제공합니다. 졸업 이후 인수인계 가능한 개발자 부재로 인해 지원 중단되었습니다.",
                                 href = "http://pf.kakao.com/_HlDVd"
                             )
 
@@ -291,7 +318,7 @@ fun main() {
                                 name = "직업키우기",
                                 role = "1인 개발",
                                 date = "2013",
-                                description = "모바일 방치형 게임 장르가 알려지지 않은 시절, Flash 게임의 모티브를 얻어 중학교 1학년 때 플레이스토어에 업로드한 게임 입니다. 이때 최초로 '키우기' 라는 타이틀을 사용하였으며, 누적 다운로드 수 100,000회 이상 달성하였습니다.",
+                                description = "모바일 방치형 게임 장르가 알려지지 않은 시절, Flash 게임의 모티브를 얻어 중학교 1학년 때 플레이스토어에 업로드한 게임 입니다. 이때 최초로 '키우기' 라는 타이틀을 사용하였으며 누적 다운로드 수 100,000회 이상 달성하였습니다.",
                                 href = "https://m.apkpure.com/kr/%EC%83%88%EB%A1%9C%EC%9A%B4%EC%9E%A5%EB%A5%B4-%EC%A7%81%EC%97%85%ED%82%A4%EC%9A%B0%EA%B8%B01/com.ideasoft.RaiseJob_1"
                             )
                         }
