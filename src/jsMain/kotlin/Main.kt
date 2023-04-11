@@ -37,7 +37,7 @@ fun main() {
 
                 Ul({ classes(HeaderStyleSheet.headerList) }) {
                     HeaderItem("HOME") {}
-                    HeaderItem("INTRODUCE") {}
+                    HeaderItem("ABOUT ME") {}
                     HeaderItem("SKILL") {}
                     HeaderItem("EXPERIENCE") {}
                     HeaderItem("PROJECT") {}
@@ -57,14 +57,7 @@ fun main() {
 
                 AboutMeSection {
                     AboutMeContainer {
-                        Div(attrs = {
-                            style {
-                                fontSize(30.px)
-                                fontWeight(900)
-                            }
-                        }) {
-                            Text("ABOUT ME - ${innerWidth.value}")
-                        }
+                        ContainerHeader("ABOUT ME")
 
                         Div(attrs = {
                             classes(PangMooStyleSheet.aboutMeInfo)
@@ -85,14 +78,7 @@ fun main() {
 
                 SkillSection {
                     SkillContainer {
-                        Div(attrs = {
-                            style {
-                                fontSize(30.px)
-                                fontWeight(900)
-                            }
-                        }) {
-                            Text("SKILLS")
-                        }
+                        ContainerHeader("SKILLS")
 
                         SkillItemContainer {
                             SkillItem(name = "Android", percent = 85)
@@ -105,14 +91,7 @@ fun main() {
 
                 ExperienceSection {
                     ExperienceContainer {
-                        Div(attrs = {
-                            style {
-                                fontSize(30.px)
-                                fontWeight(900)
-                            }
-                        }) {
-                            Text("EXPERIENCE")
-                        }
+                        ContainerHeader("EXPERIENCE")
 
                         Div(attrs = {
                             style {
@@ -125,13 +104,13 @@ fun main() {
                                 ExperienceItem(
                                     date = "2021.09 ~ 2022.12",
                                     title = "아우토크립트 안드로이드 개발 팀장",
-                                    description = "안드로이드 개발 팀장으로 대부분의 프로젝트를 개발, 관리 하였습니다."
+                                    description = "모빌리티 대여 서비스, 택시 승객/기사 서비스 등 다양한 애플리케이션을 개발하였습니다."
                                 )
 
                                 ExperienceItem(
                                     date = "2019.09 ~ 2021.09",
-                                    title = "펜타시큐리티 안드로이드 메인 개발",
-                                    description = "안드로이드 개발 팀장으로 대부분의 프로젝트를 개발, 관리 하였습니다."
+                                    title = "펜타시큐리티 안드로이드 개발",
+                                    description = "AMO WALLET 및 사내 애플리케이션 개발을 담당하였습니다."
                                 )
 
                                 ExperienceItem(
@@ -167,12 +146,22 @@ fun main() {
 }
 
 @Composable
+private fun ContainerHeader(title: String) {
+    Div(attrs = {
+        style {
+            fontSize(30.px)
+            fontWeight(900)
+        }
+    }) {
+        Text(title)
+    }
+}
+
+@Composable
 private fun ExperienceItem(date: String, title: String, description: String) {
     Div(attrs = {
         style {
             height(10.cssRem)
-//            marginBottom(50.px)
-//            paddingRight(24.px)
         }
     }) {
         Div(attrs = {
