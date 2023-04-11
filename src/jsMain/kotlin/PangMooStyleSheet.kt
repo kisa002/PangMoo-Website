@@ -68,10 +68,12 @@ object PangMooStyleSheet : StyleSheet() {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
         marginLeft(250.px)
+        marginRight(50.px)
 
         media(mediaMaxWidth(768.px)) {
             self style {
                 marginLeft(0.px)
+                marginRight(0.px)
             }
         }
     }
@@ -213,7 +215,7 @@ object PangMooStyleSheet : StyleSheet() {
         color(Color.white)
         transitionDuration(0.4f)
 
-        paddingRight(50.px) // 공통 스타일 분리
+//        paddingRight(50.px) // 공통 스타일 분리
 
         media(mediaMinWidth(576.px)) {
             self style {
@@ -315,7 +317,7 @@ object PangMooStyleSheet : StyleSheet() {
         color(Color.white)
         transitionDuration(0.4f)
 
-        paddingRight(50.px) // 공통 스타일 분리
+//        paddingRight(50.px) // 공통 스타일 분리
 
         media(mediaMinWidth(576.px)) {
             self style {
@@ -383,7 +385,7 @@ object PangMooStyleSheet : StyleSheet() {
         color(Color.white)
         transitionDuration(0.4f)
 
-        paddingRight(50.px) // 공통 스타일 분리
+//        paddingRight(50.px) // 공통 스타일 분리
 
         media(mediaMinWidth(576.px)) {
             self style {
