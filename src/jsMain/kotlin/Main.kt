@@ -151,6 +151,8 @@ fun main() {
                                 marginRight(20.px)
                             }
                         }) {
+                            // TODO Filter
+
                             ProjectItem(
                                 type = "Compose Web",
                                 name = "PangMoo",
@@ -176,6 +178,15 @@ fun main() {
                                 date = "2023",
                                 description = "AOS/Desktop을 지원하는 번역 유틸리티로 KMP의 이점을 살리기 위해 단순히 로직 공유만이 아닌 각 네이티브 기능을 활용에 초점을 두었습니다.",
                                 href = "https://github.com/kisa002/Transer"
+                            )
+
+                            ProjectItem(
+                                type = "AR",
+                                name = "AURES",
+                                role = "1인 개발",
+                                date = "2022",
+                                description = "한국공학대학교 캡스톤 디자인 1위 작품으로 AR 쇼핑몰입니다. AR Unity, WebSite Compose Web, Server PHP를 활용하였습니다.",
+                                href = "https://www.youtube.com/watch?v=xfw-bDkxfCU"
                             )
 
                             ProjectItem(
@@ -251,11 +262,20 @@ fun main() {
                             )
 
                             ProjectItem(
+                                type = "GAME",
+                                name = "Slash Hunter",
+                                role = "디자인 제외 1인 개발",
+                                date = "2020",
+                                description = "스마일게이트 멤버십 11기에 참여하여 만든 2D 플랫포머 게임으로 캐릭터를 조작하여 몬스터를 잡으며 성장하는 게임입니다.",
+                                href = "https://www.youtube.com/watch?v=d2vKvDNbdrE"
+                            )
+
+                            ProjectItem(
                                 type = "VR",
                                 name = "DRUNT",
                                 role = "디자인 제외 1인 개발",
                                 date = "2019",
-                                description = "[ Drunt, Draw your own story ] 재미있게 그리고 느끼고 소통하는 VR 드로잉툴로 HTC VIVE사의 신기술인 SRWorks를 이용하여 혼합현실에서 드로잉을 할 수 있도록 구현하였습니다. 또한 드로잉한 작품을 obj로 추출 기능을 제공함으로써 3D 프린터 장벽을 낮추었습니다.",
+                                description = "[ Drunt, Draw your own story ] 당신의 이야기를 그리는 VR 드로잉툴로 HTC VIVE사의 신기술인 SRWorks를 이용하여 혼합현실에서 드로잉을 할 수 있도록 구현하였습니다. 또한 드로잉한 작품을 obj로 추출 기능을 제공함으로써 3D 프린터 장벽을 낮추었습니다.",
                                 href = "https://www.youtube.com/watch?v=1PbxeVkxfkk"
                             )
 
@@ -282,8 +302,8 @@ fun main() {
                                 name = "경영시민",
                                 role = "1인 개발",
                                 date = "2017",
-                                description = "2018년 기준 전교생 90% 이상이 사용하는 평촌경영고등학교 챗봇으로, 오늘/내일/이달 날씨 및 급식과 학사 일정, 학사 공지 등을 제공합니다. 졸업 이후 인수인계 가능한 개발자 부재로 인해 지원 중단되었습니다.",
-                                href = "http://pf.kakao.com/_HlDVd"
+                                description = "2018년 기준 전교생 90%(+900명) 이상이 사용하는 평촌경영고등학교 챗봇으로, 오늘/내일/이달 날씨 및 급식과 학사 일정, 학사 공지 등을 제공합니다.",
+                                href = "https://www.youtube.com/watch?v=N7IlIhR3KCI"
                             )
 
                             ProjectItem(
