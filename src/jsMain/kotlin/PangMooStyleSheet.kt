@@ -289,6 +289,74 @@ object PangMooStyleSheet : StyleSheet() {
         }
     }
 
+    val experienceSection by style {
+        padding(10.vh, 0.vh)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(10.vh, 0.px)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(10.vh, 5.vw)
+            }
+        }
+    }
+
+    val experienceContainer by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+
+        property("margin-left", "auto")
+        property("margin-right", "auto")
+
+        color(Color.white)
+        transitionDuration(0.4f)
+
+        paddingRight(50.px) // 공통 스타일 분리
+
+        media(mediaMinWidth(576.px)) {
+            self style {
+                maxWidth(540.px)
+            }
+        }
+        media(mediaMinWidth(768.px)) {
+            self style {
+                maxWidth(720.px)
+            }
+        }
+        media(mediaMinWidth(1000.px)) {
+            self style {
+                maxWidth(920.px)
+            }
+        }
+        media(mediaMinWidth(1200.px)) {
+            self style {
+                maxWidth(960.px)
+            }
+        }
+        media(mediaMinWidth(1366.px)) {
+            self style {
+                maxWidth(1080.px)
+            }
+        }
+    }
+
+    val experienceTable by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Row)
+        justifyContent(JustifyContent.SpaceBetween)
+
+        marginLeft(20.px)
+        marginRight(20.px)
+    }
+
+    val experienceColumn by style {
+        width(48.percent)
+    }
+
     val button by style {
         backgroundColor(Color.black)
         padding(15.px)

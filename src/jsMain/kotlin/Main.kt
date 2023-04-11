@@ -10,19 +10,6 @@ import org.w3c.dom.events.Event
 import org.w3c.dom.events.EventListener
 
 fun main() {
-//    val innerWidth = callbackFlow<Int> {
-//        val callback = object : EventListener {
-//            override fun handleEvent(event: Event) {
-//                trySend((event.target as? Window)?.innerWidth ?: 0)
-//            }
-//        }
-//        window.addEventListener(type = "resize", callback = callback)
-//
-//        awaitClose {
-//            window.removeEventListener(type = "resize", callback = callback)
-//        }
-//    }
-
     renderComposable(rootElementId = "root") {
         val innerWidth = produceState(window.innerWidth) {
             val callback = object : EventListener {
@@ -50,7 +37,7 @@ fun main() {
 
                 Ul({ classes(HeaderStyleSheet.headerList) }) {
                     HeaderItem("HOME") {}
-                    HeaderItem("INTRODUCE") {}
+                    HeaderItem("ABOUT ME") {}
                     HeaderItem("SKILL") {}
                     HeaderItem("EXPERIENCE") {}
                     HeaderItem("PROJECT") {}
@@ -70,14 +57,7 @@ fun main() {
 
                 AboutMeSection {
                     AboutMeContainer {
-                        Div(attrs = {
-                            style {
-                                fontSize(30.px)
-                                fontWeight(900)
-                            }
-                        }) {
-                            Text("ABOUT ME - ${innerWidth.value}")
-                        }
+                        ContainerHeader("ABOUT ME")
 
                         Div(attrs = {
                             classes(PangMooStyleSheet.aboutMeInfo)
@@ -98,14 +78,7 @@ fun main() {
 
                 SkillSection {
                     SkillContainer {
-                        Div(attrs = {
-                            style {
-                                fontSize(30.px)
-                                fontWeight(900)
-                            }
-                        }) {
-                            Text("SKILLS")
-                        }
+                        ContainerHeader("SKILLS")
 
                         SkillItemContainer {
                             SkillItem(name = "Android", percent = 85)
@@ -115,6 +88,115 @@ fun main() {
                         }
                     }
                 }
+
+                ExperienceSection {
+                    ExperienceContainer {
+                        ContainerHeader("EXPERIENCE")
+
+                        Div(attrs = {
+                            style {
+                                height(60.px)
+                            }
+                        })
+
+                        Div(attrs = { classes(PangMooStyleSheet.experienceTable) }) {
+                            Div(attrs = { classes(PangMooStyleSheet.experienceColumn) }) {
+                                ExperienceItem(
+                                    date = "2021.09 ~ 2022.12",
+                                    title = "아우토크립트 안드로이드 개발 팀장",
+                                    description = "모빌리티 대여 서비스, 택시 승객/기사 서비스 등 다양한 애플리케이션을 개발하였습니다."
+                                )
+
+                                ExperienceItem(
+                                    date = "2019.09 ~ 2021.09",
+                                    title = "펜타시큐리티 안드로이드 개발",
+                                    description = "AMO WALLET 및 사내 애플리케이션 개발을 담당하였습니다."
+                                )
+
+                                ExperienceItem(
+                                    date = "2019. 03",
+                                    title = "한국공학대학교 컴퓨터공학부 소프트웨어 전공",
+                                    description = "한국공학대학교 컴퓨터공학부 소프트웨어 전공으로 1학년 2학기까지 재학 후 휴학 하였습니다."
+                                )
+                            }
+
+                            Div(attrs = { classes(PangMooStyleSheet.experienceColumn) }) {
+                                ExperienceItem(
+                                    date = "2022 ~",
+                                    title = "GDG Songdo Organizer",
+                                    description = "Google Developer Groups Songdo에서 Organizer로 활동하고 있습니다."
+                                )
+                                ExperienceItem(
+                                    date = "2022 ~",
+                                    title = "GDSC TUK Core Member",
+                                    description = "Google Developer Student Clubs TUK에서 Core Member로 활동하고 있습니다."
+                                )
+                                ExperienceItem(
+                                    date = "2015 ~",
+                                    title = "한국 게임메이커 커뮤니티 운영진",
+                                    description = "약 75,000명의 멤버가 있는 한국 게임메이커 커뮤니티 카페의 운영진으로 활동하고 있습니다."
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ContainerHeader(title: String) {
+    Div(attrs = {
+        style {
+            fontSize(30.px)
+            fontWeight(900)
+        }
+    }) {
+        Text(title)
+    }
+}
+
+@Composable
+private fun ExperienceItem(date: String, title: String, description: String) {
+    Div(attrs = {
+        style {
+            height(10.cssRem)
+        }
+    }) {
+        Div(attrs = {
+            style {
+                color(Color.darkgray)
+                fontSize(14.px)
+                fontWeight(400)
+            }
+        }) {
+            Text(date)
+        }
+
+        Div(attrs = {
+            style {
+                marginTop(16.px)
+            }
+        }) {
+            Div(attrs = {
+                style {
+                    fontSize(18.px)
+                    fontWeight(700)
+                }
+            }) {
+                Text(title)
+            }
+
+            Div(attrs = {
+                style {
+                    color(Color.gray)
+                    fontSize(16.px)
+                    marginTop(12.px)
+                    fontWeight(300)
+                }
+            }) {
+                Text(description)
             }
         }
     }
@@ -246,3 +328,11 @@ private fun SkillSection(content: ContentBuilder<HTMLDivElement>) =
 @Composable
 private fun SkillContainer(content: ContentBuilder<HTMLDivElement>) =
     Div({ classes(PangMooStyleSheet.skillContainer) }, content = content)
+
+@Composable
+private fun ExperienceSection(content: ContentBuilder<HTMLDivElement>) =
+    Div({ classes(PangMooStyleSheet.experienceSection) }, content = content)
+
+@Composable
+private fun ExperienceContainer(content: ContentBuilder<HTMLDivElement>) =
+    Div({ classes(PangMooStyleSheet.experienceContainer) }, content = content)
