@@ -439,7 +439,6 @@ object PangMooStyleSheet : StyleSheet() {
         transitionDuration(0.3f)
         hover(self) style {
             border(width = 1.px, style = LineStyle.Solid, color = Color.darkgray)
-//            borderRadius(16.px)
 
             backgroundColor(Color("#333333"))
         }
@@ -453,6 +452,83 @@ object PangMooStyleSheet : StyleSheet() {
                 display(DisplayStyle.InlineBlock)
             }
         }
+    }
+
+    val awardsSection by style {
+        padding(10.vh, 0.vh)
+
+        media(mediaMaxWidth(1000.px)) {
+            self style {
+                padding(10.vh, 0.px)
+            }
+        }
+
+        media(mediaMaxWidth(768.px)) {
+            self style {
+                padding(10.vh, 5.vw)
+            }
+        }
+    }
+
+    val awardsContainer by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Column)
+
+        property("margin-left", "auto")
+        property("margin-right", "auto")
+
+        color(Color.white)
+        transitionDuration(0.4f)
+
+//        paddingRight(50.px) // 공통 스타일 분리
+
+        media(mediaMinWidth(576.px)) {
+            self style {
+                maxWidth(540.px)
+            }
+        }
+        media(mediaMinWidth(768.px)) {
+            self style {
+                maxWidth(720.px)
+            }
+        }
+        media(mediaMinWidth(1000.px)) {
+            self style {
+                maxWidth(920.px)
+            }
+        }
+        media(mediaMinWidth(1200.px)) {
+            self style {
+                maxWidth(960.px)
+            }
+        }
+        media(mediaMinWidth(1366.px)) {
+            self style {
+                maxWidth(1080.px)
+            }
+        }
+    }
+
+    val awardItem by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Row)
+        justifyContent(JustifyContent.SpaceBetween)
+
+        backgroundColor(Color.transparent)
+
+        color(Colors.primary)
+        textDecoration("none")
+
+        border(width = 1.px, style = LineStyle.Solid, color = Color.transparent)
+        property("border-bottom", "solid 1px darkgray")
+
+        paddingLeft(8.px)
+        paddingRight(8.px)
+
+        paddingTop(12.px)
+        paddingBottom(12.px)
+
+        transitionDuration(0.3f)
     }
 
     val button by style {

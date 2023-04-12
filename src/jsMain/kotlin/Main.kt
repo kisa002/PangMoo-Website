@@ -159,7 +159,7 @@ fun main() {
                                 role = "1인 개발",
                                 date = "2023~",
                                 description = "이 사이트를 Compose Web을 활용하여 개발하였습니다. 완성 후 skiko로 리메이크 할 예정입니다.",
-                                href = "/"
+                                href = "./"
                             )
 
                             ProjectItem(
@@ -212,7 +212,7 @@ fun main() {
                                 name = "아이맘택시",
                                 role = "유지보수",
                                 date = "2022",
-                                description = "은평구청 정부사 업으로 운영되는 택시 서비스로, 택시 예약 및 기사의 운행 상태와 위치를 실시간으로 확인할 수 있습니다.",
+                                description = "은평구청 정부사업으로 운영되는 택시 서비스로, 택시 예약 및 기사의 운행 상태와 위치를 실시간으로 확인할 수 있습니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.namu.pax&hl=ko&gl=US"
                             )
 
@@ -221,7 +221,7 @@ fun main() {
                                 name = "아이맘택시(기사용)",
                                 role = "메인 개발",
                                 date = "2021-2022",
-                                description = "은평구청 정부사 업으로 운영되는 택시 서비스로, 콜 수락/거부 및 기사의 위치/상태를 실시간으로 동기화합니다.",
+                                description = "은평구청 정부사업으로 운영되는 택시 서비스로, 콜 수락/거부 및 기사의 위치/상태를 실시간으로 동기화합니다.",
                                 href = "https://play.google.com/store/apps/details?id=com.autocrypt.mi.namu.dvr&hl=ko&gl=US"
                             )
 
@@ -293,7 +293,7 @@ fun main() {
                                 name = "트레리티 - AR 길안내",
                                 role = "디자인 제외 1인 개발",
                                 date = "2018",
-                                description = "SK Planet에서 주최하는 STA+C 2018 대회 최우수 수상 작품으로 AR 지도 길안내 서비스 입니다.",
+                                description = "AR 지도 길안내 서비스로 SK Planet에서 주최하는 STA+C 2018 대회 최우수상을 수상하여 싱가포르 창업 해외 연수를 다녀왔습니다.",
                                 href = "https://www.youtube.com/watch?v=Ljaa8M-oIaU"
                             )
 
@@ -343,6 +343,142 @@ fun main() {
                             )
                         }
                     }
+                }
+
+                AwardsSection {
+                    AwardsContainer {
+                        ContainerHeader(title = "Awards")
+                        Spacer()
+
+                        Div(attrs = {
+                            style {
+                                display(DisplayStyle.Flex)
+                                flexDirection(FlexDirection.Column)
+                                marginLeft(20.px)
+                                marginRight(20.px)
+                            }
+                        }) {
+                            AwardsItem(
+                                name = "2019 경기 VR/AR 해커톤 대회 HTC VIBE 초이스상",
+                                issuer = "HTC VIVE",
+                                date = "2019. 08"
+                            )
+                            AwardsItem(
+                                name = "SEOUL 미세먼지 해커톤 대회 장려상 서울기술연구원장상",
+                                issuer = "서울기술연구원",
+                                date = "2019. 06"
+                            )
+                            AwardsItem(
+                                name = "제18회 앱잼 최우수상",
+                                issuer = "SK Planet",
+                                date = "2019. 04"
+                            )
+                            AwardsItem(
+                                name = "2018 안양 창업 페스티벌 장려상",
+                                issuer = "안양창조산업진흥원장상",
+                                date = "2018. 12"
+                            )
+                            AwardsItem(
+                                name = "2018 GGC 게임잼 대상",
+                                issuer = "GGC",
+                                date = "2018. 12"
+                            )
+                            AwardsItem(
+                                name = "제4회 A-CUBE게임잼 디자인상",
+                                issuer = "에이큐브",
+                                date = "2018. 10"
+                            )
+                            AwardsItem(
+                                name = "제4회 하이톤 최우수상",
+                                issuer = "하이톤",
+                                date = "2018. 08"
+                            )
+                            AwardsItem(
+                                name = "STA+C 2018 최우수상",
+                                issuer = "SK Planet",
+                                date = "2018. 07"
+                            )
+                            AwardsItem(
+                                name = "제3회 하이톤 최우수상",
+                                issuer = "하이톤",
+                                date = "2018. 06"
+                            )
+                            AwardsItem(
+                                name = "전국 고등학교 동아리 SW 경진 대회 장려상",
+                                issuer = "KAIST & 충남대학교",
+                                date = "2018. 01"
+                            )
+                            AwardsItem(
+                                name = "제5회 인디게임 위크엔드 최우수상",
+                                issuer = "인디게임 위크엔드",
+                                date = "2017. 11"
+                            )
+                            AwardsItem(
+                                name = "IT'S 챌린지 대회 우수아이디어상",
+                                issuer = "신세계아이엔씨",
+                                date = "2017. 06"
+                            )
+                            AwardsItem(
+                                name = "정보영재학급 교육감상",
+                                issuer = "경기도 교육청",
+                                date = "2016. 12"
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun AwardsItem(name: String, issuer: String, date: String) {
+    Div(attrs = {
+        classes(PangMooStyleSheet.awardItem)
+    }) {
+        Div(attrs = {
+            style {
+                display(DisplayStyle.Flex)
+                flexDirection(FlexDirection.Column)
+                width(100.percent)
+            }
+        }) {
+            Span(attrs = {
+                style {
+                    fontSize(20.px)
+                    fontWeight(700)
+                    color(Color.white)
+                }
+            }) {
+                Text(name)
+            }
+
+            Div(attrs = {
+                style {
+                    display(DisplayStyle.Flex)
+                    flexDirection(FlexDirection.Row)
+
+                    marginTop(4.px)
+                }
+            }) {
+                Span(attrs = {
+                    style {
+                        fontSize(16.px)
+                        color(Color.gray)
+                    }
+                }) {
+                    Text(date)
+                }
+
+                Span(attrs = {
+                    style {
+                        fontSize(16.px)
+                        color(Color.gray)
+
+                        marginLeft(8.px)
+                    }
+                }) {
+                    Text(issuer)
                 }
             }
         }
@@ -421,7 +557,7 @@ private fun ProjectItem(type: String, name: String, role: String, date: String, 
 }
 
 @Composable
-private fun Spacer(height: CSSNumeric = 60.px) {
+private fun Spacer(width: CSSNumeric = 0.px, height: CSSNumeric = 60.px) {
     Div(attrs = {
         style {
             height(height)
@@ -628,3 +764,11 @@ private fun ProjectSection(content: ContentBuilder<HTMLDivElement>) =
 @Composable
 private fun ProjectContainer(content: ContentBuilder<HTMLDivElement>) =
     Div({ classes(PangMooStyleSheet.projectContainer) }, content = content)
+
+@Composable
+private fun AwardsSection(content: ContentBuilder<HTMLDivElement>) =
+    Div({ classes(PangMooStyleSheet.awardsSection) }, content = content)
+
+@Composable
+private fun AwardsContainer(content: ContentBuilder<HTMLDivElement>) =
+    Div({ classes(PangMooStyleSheet.awardsContainer) }, content = content)
