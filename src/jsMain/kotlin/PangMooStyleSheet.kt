@@ -591,7 +591,7 @@ object PangMooStyleSheet : StyleSheet() {
 
         backgroundColor(Color.transparent)
 
-        color(Colors.primary)
+        color(Color.darkgray)
         textDecoration("none")
 
         border(width = 1.px, style = LineStyle.Solid, color = Color.transparent)

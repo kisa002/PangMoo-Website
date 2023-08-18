@@ -4,6 +4,7 @@ import kotlinx.browser.window
 import org.jetbrains.compose.web.attributes.ATarget
 import org.jetbrains.compose.web.attributes.target
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.keywords.CSSAutoKeyword
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
 import org.w3c.dom.HTMLDivElement
@@ -444,43 +445,50 @@ fun main() {
                                 title = "공적 마스크 지도앱 뉴스",
                                 reference = "조선일보",
                                 date = "2020. 03. 24",
-                                summary = "공동 대응이 정부에 제안하고 마스크맵 서비스가 개시되기까지 걸린 시간은 딱 일주일이었다. 대중의 반응은 폭발적이다. 한국정보화진흥원에 따르면 마스크맵 관련 서비스의 조회 수를 모두 더하면 시간당 최대 1000만건에 달한다.\n유광무(20)씨는 '세이브마스크' 서비스를 만들었다. 원활한 서비스를 제공하기 위해 요즘도 퇴근 후 매일 새벽 3시까지 유지·보수 작업을 한다"
+                                summary = "공동 대응이 정부에 제안하고 마스크맵 서비스가 개시되기까지 걸린 시간은 딱 일주일이었다. 대중의 반응은 폭발적이다. 한국정보화진흥원에 따르면 마스크맵 관련 서비스의 조회 수를 모두 더하면 시간당 최대 1000만건에 달한다.\n유광무(20)씨는 '세이브마스크' 서비스를 만들었다. 원활한 서비스를 제공하기 위해 요즘도 퇴근 후 매일 새벽 3시까지 유지·보수 작업을 한다",
+                                href = "https://www.chosun.com/site/data/html_dir/2020/03/23/2020032303791.html"
+                            )
+                            NewsItem(
+                                title = "2019 경기 VR/AR 해커톤 우승",
+                                reference = "뉴스핌",
+                                date = "2019. 07. 30",
+                                summary = "해윰(HYEYUM)팀은 HTC바이브 초이스로 선정돼 VR기술 활용 가구배치 및 가상현실 인테리어 콘텐츠를 개발해 대만 HTC바이브의 후원으로 현지 VR행사인 ‘United XR’에서의 참가 및 비즈니스 네트워킹 기회를 얻었다.",
+                                href = "https://www.newspim.com/news/view/20190730000491"
                             )
                             NewsItem(
                                 title = "도봉구 도서관 강연 뉴스",
                                 reference = "뉴스1",
                                 date = "2019. 05. 24",
-                                summary = "청소년 인디개발사 'HAEYUM'의 유광무 대표가 '나만의 AI 비서, 챗봇'을 주제로 강연한다"
+                                summary = "청소년 인디개발사 'HAEYUM'의 유광무 대표가 '나만의 AI 비서, 챗봇'을 주제로 강연한다",
+                                href = "https://www.news1.kr/articles/?3629401"
                             )
                             NewsItem(
                                 title = "18회 앱잼 최우수상 수상 뉴스",
                                 reference = "게임동아",
                                 date = "2019. 04. 23",
-                                summary = "엔터테인먼트 부문은 '폰드'(박지원, 정우주, 김가영, 유광무, 김우혁) 팀이 최우수상"
+                                summary = "엔터테인먼트 부문은 '폰드'(박지원, 정우주, 김가영, 유광무, 김우혁) 팀이 최우수상",
+                                href = "https://game.donga.com/91814/"
                             )
                             NewsItem(
                                 title = "GGC(Global Game Challenge) 2018 대상",
                                 reference = "전자신문",
                                 date = "2018. 12. 23",
-                                summary = "게임개발경진대회 'GGC 게임잼' 경연에선 양명진, 김대도, 소병욱, 유광무 학생이 팀을 이뤄 개발한 스마트폰 게임 '패턴나이트'가 1위를 차지했다."
-                            )
-                            NewsItem(
-                                title = "2019 경기 VR/AR 해커톤 우승",
-                                reference = "뉴스웨이",
-                                date = "-",
-                                summary = "해윰(HYEYUM)팀은 VR기술 활용 가구배치 및 가상현실 인테리어 콘텐츠를 개발해 대만 HTC바이브의 후원으로 현지 VR행사인 ‘United XR’에서의 참가 및 비즈니스 네트워킹 기회를 얻었다."
+                                summary = "게임개발경진대회 'GGC 게임잼' 경연에선 양명진, 김대도, 소병욱, 유광무 학생이 팀을 이뤄 개발한 스마트폰 게임 '패턴나이트'가 1위를 차지했다.",
+                                href = "https://www.etnews.com/20181223000004"
                             )
                             NewsItem(
                                 title = "16회 앱잼 개최 관련 뉴스",
                                 reference = "게임동아",
                                 date = "2018. 08. 21",
-                                summary = "한국 최대의 청소년 앱 개발 경진대회인 STAC(스마틴앱챌린지)에 참여한 학생들이 주축이 되어 진행하는 이 행사는 미래의 IT 개발 주역들인 청소년들 200여 명이 몰려 개발에 대한 뜨거운 열정을 확인할 수 있었다."
+                                summary = "한국 최대의 청소년 앱 개발 경진대회인 STAC(스마틴앱챌린지)에 참여한 학생들이 주축이 되어 진행하는 이 행사는 미래의 IT 개발 주역들인 청소년들 200여 명이 몰려 개발에 대한 뜨거운 열정을 확인할 수 있었다.",
+                                href = "https://game.donga.com/90001/"
                             )
                             NewsItem(
                                 title = "꿈스타그램 고등학생 개발자 출연",
                                 reference = "JTBC 꿈스타그램",
                                 date = "2017. 07. 18",
-                                summary = "평촌경영고등학교 유광무 학생과 함께하는 좌충우돌 앱 개발기~ 대기업 연봉 수준의 수익을 안겨준 특급 애플리케이션부터 사람은 물론~ 강아지들까지 심쿵(?)하게 만든 신작 최초 공개! 어른들 못지않은 청소년 능력자들의 이야기"
+                                summary = "평촌경영고등학교 유광무 학생과 함께하는 좌충우돌 앱 개발기~ 대기업 연봉 수준의 수익을 안겨준 특급 애플리케이션부터 사람은 물론~ 강아지들까지 심쿵(?)하게 만든 신작 최초 공개! 어른들 못지않은 청소년 능력자들의 이야기",
+                                href = "https://tv.jtbc.co.kr/replay/pr10010454/pm10041346/ep10034866/view"
                             )
                         }
                     }
@@ -491,23 +499,29 @@ fun main() {
 }
 
 @Composable
-private fun NewsItem(title: String, reference: String, date: String, summary: String) {
-    Div(attrs = {
-        classes(PangMooStyleSheet.newsItem)
-        style {
-            flexDirection(FlexDirection.Column)
-        }
-    }) {
-        Div(attrs = {
+private fun NewsItem(title: String, reference: String, date: String, summary: String, href: String = "") {
+    A(
+        attrs = {
+            classes(PangMooStyleSheet.newsItem)
             style {
-                display(DisplayStyle.Flex)
-                flexDirection(FlexDirection.Row)
-                justifyContent(JustifyContent.SpaceBetween)
-                width(100.percent)
-
-                alignItems(AlignItems.Center)
+                flexDirection(FlexDirection.Column)
             }
-        }) {
+            target(ATarget.Blank)
+        },
+        href = href
+    ) {
+        Div(
+            attrs = {
+                style {
+                    display(DisplayStyle.Flex)
+                    flexDirection(FlexDirection.Row)
+                    justifyContent(JustifyContent.SpaceBetween)
+                    width(100.percent)
+
+                    alignItems(AlignItems.Center)
+                }
+            }
+        ) {
             Span(attrs = {
                 style {
                     fontSize(20.px)
