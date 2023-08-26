@@ -586,7 +586,7 @@ object PangMooStyleSheet : StyleSheet() {
 
     val newsItem by style {
         display(DisplayStyle.Flex)
-        flexDirection(FlexDirection.Row)
+        flexDirection(FlexDirection.Column)
         justifyContent(JustifyContent.SpaceBetween)
 
         backgroundColor(Color.transparent)
@@ -604,6 +604,20 @@ object PangMooStyleSheet : StyleSheet() {
         paddingBottom(12.px)
 
         transitionDuration(0.3f)
+
+        self + " svg" style {
+            display(DisplayStyle.None)
+        }
+
+        hover(self) style {
+            border(width = 1.px, style = LineStyle.Solid, color = Color.darkgray)
+
+            backgroundColor(Color("#333333"))
+
+            " svg" style {
+                display(DisplayStyle.InlineBlock)
+            }
+        }
     }
 
     val button by style {

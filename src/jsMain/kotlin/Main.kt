@@ -1,5 +1,6 @@
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.produceState
+import kotlinx.browser.document
 import kotlinx.browser.window
 import org.jetbrains.compose.web.attributes.ATarget
 import org.jetbrains.compose.web.attributes.target
@@ -11,6 +12,7 @@ import org.w3c.dom.HTMLDivElement
 import org.w3c.dom.Window
 import org.w3c.dom.events.Event
 import org.w3c.dom.events.EventListener
+import org.w3c.dom.get
 
 fun main() {
     renderComposable(rootElementId = "root") {
@@ -502,11 +504,8 @@ fun main() {
 private fun NewsItem(title: String, reference: String, date: String, summary: String, href: String = "") {
     A(
         attrs = {
-            classes(PangMooStyleSheet.newsItem)
-            style {
-                flexDirection(FlexDirection.Column)
-            }
             target(ATarget.Blank)
+            classes(PangMooStyleSheet.newsItem)
         },
         href = href
     ) {
@@ -530,6 +529,17 @@ private fun NewsItem(title: String, reference: String, date: String, summary: St
                 }
             }) {
                 Text(title)
+
+                I(attrs = {
+                    classes("fa-solid", "fa-arrow-up-right-from-square")
+                    style {
+                        color(Color.lightslategray)
+                        marginLeft(10.px)
+                        paddingBottom(3.px)
+
+                        fontSize(16.px)
+                    }
+                })
             }
 
             Span(attrs = {
